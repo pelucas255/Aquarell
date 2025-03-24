@@ -1,0 +1,122 @@
+// Estilos generales
+ion-content {
+    --background: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  // Estilos del encabezado
+  ion-toolbar {
+    --background: #1e2023;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  .logo {
+    width: 100px;
+    height: auto;
+    margin-right: auto;
+  }
+  
+  .title-text {
+    color: black;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  // Contenedor del calendario
+  .calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+  
+  // Títulos
+  .month-title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: #333;
+    text-align: center;
+  }
+  
+  .year-title {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: center;
+  }
+  
+  // Cuadrícula del calendario
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  // Días de la semana
+  .calendar-day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-weight: bold;
+    color: white;
+    background-color: #4a8f47;
+    border-radius: 5px;
+  }
+  
+  // Fechas del calendario
+  .calendar-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #4a8f47;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    
+    &.active {
+      background-color: #2e5e2c;
+    }
+    
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  
+  // Texto de instrucción
+  .instruction-text {
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  // Botones de navegación
+  .nav-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #e8f5e9;
+    padding: 10px 0;
+  }
+  
+  .nav-button {
+    --color: #4a8f47;
+    font-size: 24px;
+  }

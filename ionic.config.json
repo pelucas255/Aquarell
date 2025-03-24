@@ -1,0 +1,7 @@
+{
+  "name": "Aquarelle",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
