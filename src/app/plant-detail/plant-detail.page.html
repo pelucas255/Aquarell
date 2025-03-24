@@ -1,0 +1,78 @@
+<div>
+  <ion-toolbar class="header-toolbar">
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="assets/img/IconoRiego.png" alt="Logo" class="logo-header">
+      </div>
+
+      <nav class="navbar-desktop">
+        <div class="nav-item">
+          <ion-button fill="clear" class="nav-btn hover-effect" (click)="home()">
+            <div class="btn-content">
+              <img src="assets/img/home.png" alt="Home">
+              <span>Inicio</span>
+            </div>
+          </ion-button>
+        </div>
+        <div class="nav-item">
+          <ion-button fill="clear" class="nav-btn hover-effect" (click)="add()">
+            <div class="btn-content">
+              <img src="assets/img/add.png" alt="Agregar">
+              <span>Agregar</span>
+            </div>
+          </ion-button>
+        </div>
+        <div class="nav-item">
+          <ion-button fill="clear" class="nav-btn hover-effect" (click)="calendar()">
+            <div class="btn-content">
+              <img src="assets/img/calendar.png" alt="Calendario">
+              <span>Calendario</span>
+            </div>
+          </ion-button>
+        </div>
+      </nav>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button class="nav-btn hover-effect" routerLink="/login">
+        <img src="assets/img/CerrarCuenta.png" alt="Cerrar sesión" class="close-header">
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</div>
+
+<ion-content class="home-background">
+  <div class="contenido">
+    <h1>{{ planta?.nombre }}</h1>
+
+    <div class="plant-detail-card">
+      <img *ngIf="planta?.imagen" [src]="planta.imagen" alt="Imagen de la planta" class="planta-img-detalle" />
+
+      <div class="plant-detail-info">
+        <p><strong>Humedad mínima:</strong> {{ planta?.humedadMinima }}%</p>
+        <p><strong>Tiempo de riego:</strong> {{ planta?.tiempoRiego }} segundos</p>
+        <p><strong>Sensor asignado:</strong> {{ planta?.sensorId }}</p>
+
+        <ion-button expand="block" class="botonIni" (click)="activarRiego()">
+          Activar riego manual
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer class="navbar-movil">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button fill="clear" class="nav-btn hover-effect" (click)="home()">
+        <img src="assets/img/home.png" alt="Home">
+      </ion-button>
+      <ion-button fill="clear" class="nav-btn hover-effect" (click)="add()">
+        <img src="assets/img/add.png" alt="Agregar">
+      </ion-button> 
+      <ion-button fill="clear" class="nav-btn hover-effect" (click)="calendar()">
+        <img src="assets/img/calendar.png" alt="Calendario">
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

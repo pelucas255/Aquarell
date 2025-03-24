@@ -1,0 +1,112 @@
+<div>
+  <ion-toolbar class="header-toolbar">
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="assets/img/IconoRiego.png" alt="Logo" class="logo-header">
+      </div>
+      <nav class="navbar-desktop">
+        <div class="nav-item">
+          <ion-button fill="clear" class="nav-btn hover-effect" (click)="home()">
+            <div class="btn-content">
+              <img src="assets/img/home.png" alt="Home">
+              <span>Inicio</span>
+            </div>
+          </ion-button>
+        </div>
+        <div class="nav-item">
+          <ion-button fill="clear" class="nav-btn hover-effect" (click)="add()">
+            <div class="btn-content">
+              <img src="assets/img/add.png" alt="Agregar">
+              <span>Agregar</span>
+            </div>
+          </ion-button>
+        </div>
+        <div class="nav-item">
+          <ion-button fill="clear" class="nav-btn hover-effect" (click)="calendar()">
+            <div class="btn-content">
+              <img src="assets/img/calendar.png" alt="Calendario">
+              <span>Calendario</span>
+            </div>
+          </ion-button>
+        </div>
+      </nav>
+    </div>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()" class="nav-btn hover-effect">
+        <img src="assets/img/CerrarCuenta.png" alt="Cerrar sesión" class="close-header">
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</div>
+
+<ion-content class="home-background">
+  <div class="contenido">
+
+    <h1>Agregar Nueva Planta</h1>
+
+    <div class="image-upload">
+      <img *ngIf="imagenPrevia" [src]="imagenPrevia" alt="Vista previa" class="preview-image">
+      <ion-button expand="block" class="botonSub" (click)="seleccionarImagen()">Subir Imagen</ion-button>
+      <input type="file" hidden (change)="cargarImagen($event)" #fileInput accept="image/*">
+    </div>
+
+    <ion-item>
+      <ion-label>Seleccionar tipo de planta</ion-label>
+      <ion-select [(ngModel)]="plantaSeleccionada" (ionChange)="verificarSeleccion()">
+        <ion-select-option *ngFor="let planta of opcionesPlantas" [value]="planta">{{ planta.nombre }}</ion-select-option>
+        <ion-select-option value="personalizado">Personalizado</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div *ngIf="plantaSeleccionada === 'personalizado'">
+      <ion-item>
+        <ion-label position="floating">Nombre de la planta</ion-label>
+        <ion-input [(ngModel)]="nombrePersonalizado"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Humedad mínima (%)</ion-label>
+        <ion-input type="number" [(ngModel)]="humedadMinimaPersonalizada"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Tiempo de riego (segundos)</ion-label>
+        <ion-input type="number" [(ngModel)]="tiempoRiegoPersonalizado"></ion-input>
+      </ion-item>
+
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">ID del sensor de humedad</ion-label>
+      <ion-input type="text" [(ngModel)]="sensorId"></ion-input>
+    </ion-item>
+    
+
+    <ion-button expand="block" class="botonIni" (click)="guardarPlanta()">Guardar Planta</ion-button>
+
+  </div>
+
+  <div class="containerPlantaBottom">
+    <img src="../../assets/img/planta7.jpg" alt="Logo" class="planta-bottom">
+  </div>
+  <div class="containerPlantaTop">
+    <img src="../../assets/img/planta5.jpg" alt="Logo" class="planta-top">
+  </div>
+</ion-content>
+
+
+<ion-footer class="navbar-movil">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button fill="clear" class="nav-btn hover-effect" (click)="home()">
+        <img src="assets/img/home.png" alt="Home">
+      </ion-button>
+      <ion-button fill="clear" class="nav-btn hover-effect" (click)="add()">
+        <img src="assets/img/add.png" alt="Agregar">
+      </ion-button> 
+      <ion-button fill="clear" class="nav-btn hover-effect" (click)="calendar()">
+        <img src="assets/img/calendar.png" alt="Calendario">
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

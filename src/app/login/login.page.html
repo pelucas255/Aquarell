@@ -1,0 +1,29 @@
+<ion-content class="ion-padding login-background">
+  <div class="login-container">
+    <img src="assets/img/IconoRiego.png" alt="Logo" class="logo">
+    <h1 class="titulo">Bienvenido a Aquarelle</h1>
+    <p class="subtitulo">Ingrese su correo y contraseña</p>
+
+    <ion-list class="login-box">
+      <ion-item>
+        <ion-label position="floating">Correo electrónico</ion-label>
+        <ion-input type="email" [(ngModel)]="email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password" required></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="block" class="botonIni" (click)="login()">Iniciar Sesión</ion-button>
+    <ion-text color="medium">
+      <p class="textReg" (click)="goToRegister()">¿No tiene cuenta? Registrese aqui</p>
+    </ion-text>
+  </div>
+  <div class="containerPlanta">
+    <img src="assets/img/planta1.jpg" alt="Logo" class="planta">
+  </div>
+  <div class="containerPlantaTop">
+    <img src="assets/img/planta4.jpg" alt="Logo" class="planta-top">
+  </div>
+</ion-content>

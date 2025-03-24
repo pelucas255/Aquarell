@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home-background {
+  --background: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header-toolbar {
+  --background: white !important;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: none !important;
+  padding: 0 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-header {
+  width: 150px;
+}
+
+.close-header {
+  width: 35px;
+  height: auto;
+  cursor: pointer;
+}
+
+.navbar-desktop {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 40px;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-btn {
+  --background: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; 
+}
+
+.btn-content img {
+  width: 40px;
+  height: auto;
+}
+
+.btn-content span {
+  font-size: 13px;
+  color: black;
+  text-align: center;
+  line-height: 1;
+}
+
+.nav-btn img {
+  width: 40px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.nav-btn span {
+  font-size: 13px;
+  color: black;
+  line-height: 1;
+}
+
+.nav-btn:hover {
+  background-color: #e3d390 !important; 
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  flex-grow: 1;
+  color: black;
+  width: 90%; 
+  max-width: 600px; 
+  margin: auto; 
+}
+
+
+ion-item {
+  --background: white;
+  --border-radius: 8px;
+  --color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+ion-label {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+  display: block;
+  white-space: normal; 
+}
+
+ion-select {
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+}
+
+::ng-deep .alert-wrapper {
+  background: rgba(113, 140, 110, 0.95) !important;
+  border-radius: 10px;
+}
+
+::ng-deep .alert-head {
+  color: white !important;
+}
+
+::ng-deep .alert-button {
+  color: white !important;
+}
+
+.botonSub {
+  --background: #e3d390;
+  --color: black;
+  margin-top: 30px;
+}
+
+.botonIni {
+  --background: #9eba9b;
+  --color: black;
+  margin-top: 30px;
+}
+
+.image-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.preview-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.navbar-movil {
+  display: flex;
+  justify-content: space-between;
+  background: white !important;
+  border-top: 1px solid #ddd;
+}
+
+.navbar-movil ion-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-movil .nav-btn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white !important;
+  color: black;
+  transition: background-color 0.3s ease-in-out;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.navbar-movil img {
+  width: 28px;
+  cursor: pointer;
+}
+
+.navbar-movil .nav-btn:hover {
+  background-color: #e3d390 !important;
+  transition: 0.3s;
+}
+
+.containerPlantaTop {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  max-width: 28vw; 
+  max-height: 22vh;
+}
+
+.planta-top {
+  width: 100%;
+  opacity: 0.4;
+  object-fit: contain;
+  transform: rotate(300deg);
+}
+
+.containerPlantaBottom {
+  position: fixed;
+  bottom: 190px;
+  left: 0;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  max-width: 28vw;
+  max-height: 22vh;
+}
+
+.planta-bottom {
+  width: 100%;
+  opacity: 0.4;
+  object-fit: contain;
+  transform: rotate(60deg);
+}
+
+@media (max-width: 899px) {
+  .navbar-desktop {
+    display: none;
+  }
+  .navbar-movil {
+    display: flex;
+  }
+}
+
+@media (min-width: 900px) {
+  .navbar-movil {
+    display: none;
+  }
+  .navbar-desktop {
+    display: flex;
+  }
+  .home-background {
+    overflow-y: hidden !important;
+  }
+}
+

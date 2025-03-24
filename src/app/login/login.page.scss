@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+.login-background {
+    --background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.logo {
+    width: 250px;
+}
+
+.titulo{
+    color: black;
+    font-family: 'Alice', serif;
+    font-size: 40px;
+}
+
+.subtitulo{
+    color: black;
+    font-size: 20px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 360px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+ion-item {
+    --background: white;
+    --border-radius: 8px;
+    --color: black;
+}
+
+.textReg {
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.botonIni {
+    --background: #9eba9b;
+    --color: black;
+    margin-top: 30px;
+}
+
+.containerPlanta {
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    max-width: 30vw;
+    max-height: 60vh;
+}
+
+.planta {
+    width: 100%;
+    opacity: 0.4;
+    object-fit: contain; 
+}
+
+.containerPlantaTop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    max-width: 30vw;
+    max-height: 40vh;
+}
+
+.planta-top {
+    width: 100%;
+    opacity: 0.4;
+    object-fit: contain;
+    transform: rotate(180deg);
+}

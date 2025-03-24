@@ -1,0 +1,114 @@
+<div>
+  <ion-toolbar class="header-toolbar">
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="assets/img/IconoRiego.png" alt="Logo" class="logo-header">
+      </div>
+
+      <nav class="navbar-desktop">
+        <div class="nav-item">
+          <ion-button fill="clear" class="nav-btn hover-effect" (click)="home()">
+            <div class="btn-content">
+              <img src="assets/img/home.png" alt="Home">
+              <span>Inicio</span>
+            </div>
+          </ion-button>
+        </div>
+        <div class="nav-item">
+          <ion-button fill="clear" class="nav-btn hover-effect" (click)="add()">
+            <div class="btn-content">
+              <img src="assets/img/add.png" alt="Agregar">
+              <span>Agregar</span>
+            </div>
+          </ion-button>
+        </div>
+        <div class="nav-item">
+          <ion-button fill="clear" class="nav-btn hover-effect" (click)="calendar()">
+            <div class="btn-content">
+              <img src="assets/img/calendar.png" alt="Calendario">
+              <span>Calendario</span>
+            </div>
+          </ion-button>
+        </div>
+      </nav>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()" class="nav-btn hover-effect">
+        <img src="assets/img/CerrarCuenta.png" alt="Cerrar sesión" class="close-header">
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</div>
+
+<ion-content class="home-background">
+  <div class="contenido">
+    <h1>Bienvenido, Usuario</h1>
+
+    <div class="plantas">
+      <h2>Estas son sus plantas actuales</h2>
+      <div class="scroll-container">
+        <ion-card *ngFor="let planta of plantas" (click)="verPlanta(planta)">
+          <ion-card-content>
+            <img [src]="planta.imagen" alt="Planta" class="planta-img" />
+            <p>{{ planta.nombre }}</p>
+          </ion-card-content>
+        </ion-card>        
+      </div>
+    </div>
+
+    <div class="contenedor-sensores">
+      <div class="sensores">
+        <div class="humedadAmb">
+          <h2>Humedad ambiental:</h2>
+          <div class="humedad-circulo">
+            <p>{{ humedad }}%</p>
+          </div>
+        </div>
+
+        <div class="temperaturaAmb">
+          <h2>Temperatura:</h2>
+          <div class="temperatura-circulo">
+            <p>{{ temperatura }}°C</p>
+          </div>
+        </div>
+
+        <div class="aguaRecipiente">
+          <h2>Agua restante:</h2>
+          <div class="agua-circulo">
+            <div class="nivel-agua" [ngStyle]="{ height: aguaRestante + '%' }">
+              <div class="onda"></div>
+            </div>
+            <p>{{ aguaRestante }}%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="containerPlantaBottom">
+    <img src="../../assets/img/planta6.jpg" alt="Logo" class="planta-bottom">
+  </div>
+  <div class="containerPlantaTop">
+    <img src="../../assets/img/planta3.jpg" alt="Logo" class="planta-top">
+  </div>
+</ion-content>
+
+<ion-footer class="navbar-movil">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button fill="clear" class="nav-btn hover-effect" (click)="home()">
+        <img src="assets/img/home.png" alt="Home">
+      </ion-button>
+      <ion-button fill="clear" class="nav-btn hover-effect" (click)="add()">
+        <img src="assets/img/add.png" alt="Agregar">
+      </ion-button> 
+      <ion-button fill="clear" class="nav-btn hover-effect" (click)="calendar()">
+        <img src="assets/img/calendar.png" alt="Calendario">
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+
+

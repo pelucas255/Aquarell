@@ -1,0 +1,89 @@
+<div>
+  <ion-toolbar class="header-toolbar">
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="assets/img/IconoRiego.png" alt="Logo" class="logo-header">
+      </div>
+
+      <nav class="navbar-desktop">
+        <div class="nav-item">
+          <ion-button fill="clear" class="nav-btn hover-effect" (click)="home()">
+            <div class="btn-content">
+              <img src="assets/img/home.png" alt="Home">
+              <span>Inicio</span>
+            </div>
+          </ion-button>
+        </div>
+        <div class="nav-item">
+          <ion-button fill="clear" class="nav-btn hover-effect" (click)="add()">
+            <div class="btn-content">
+              <img src="assets/img/add.png" alt="Agregar">
+              <span>Agregar</span>
+            </div>
+          </ion-button>
+        </div>
+        <div class="nav-item">
+          <ion-button fill="clear" class="nav-btn hover-effect" (click)="calendar()">
+            <div class="btn-content">
+              <img src="assets/img/calendar.png" alt="Calendario">
+              <span>Calendario</span>
+            </div>
+          </ion-button>
+        </div>
+      </nav>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()" class="nav-btn hover-effect">
+        <img src="assets/img/CerrarCuenta.png" alt="Cerrar sesión" class="close-header">
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</div>
+
+<ion-content class="home-background">
+  <div class="contenido">
+    <h2>Selecciona una fecha</h2>
+
+    <div class="calendar-controls">
+      <ion-select [(ngModel)]="selectedYear" (ionChange)="generateCalendar()">
+        <ion-select-option *ngFor="let year of years" [value]="year">{{ year }}</ion-select-option>
+      </ion-select>
+
+      <ion-select [(ngModel)]="selectedMonth" (ionChange)="generateCalendar()">
+        <ion-select-option *ngFor="let month of months; let i = index" [value]="i">{{ month }}</ion-select-option>
+      </ion-select>
+    </div>
+
+    <div class="calendar-grid">
+      <div class="day-label" *ngFor="let day of dayNames">{{ day }}</div>
+      <button *ngFor="let day of calendarDays" class="calendar-day" (click)="selectDay(day)">
+        {{ day || '' }}
+      </button>
+    </div>
+
+    <h3>Seleccione un dia para ver los riegos que se ejecutaron en este</h3>
+    <div class="containerPlantaBottom">
+      <img src="../../assets/img/planta2.jpg" alt="Logo" class="planta-bottom">
+    </div>
+    <div class="containerPlantaTop">
+      <img src="../../assets/img/planta4.jpg" alt="Logo" class="planta-top">
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer class="navbar-movil">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button fill="clear" class="nav-btn hover-effect" (click)="home()">
+        <img src="assets/img/home.png" alt="Home">
+      </ion-button>
+      <ion-button fill="clear" class="nav-btn hover-effect" (click)="add()">
+        <img src="assets/img/add.png" alt="Agregar">
+      </ion-button>
+      <ion-button fill="clear" class="nav-btn hover-effect" (click)="calendar()">
+        <img src="assets/img/calendar.png" alt="Calendario">
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
