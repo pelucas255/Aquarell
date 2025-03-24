@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>
+      <div class="header-container">
+        <img src="assets/img/IconoRiego.png" alt="Logo" class="logo">
+        <span class="title-text">Registro de riegos</span>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="calendar-container">
+    <h2 class="month-title">Febrero</h2>
+    <h3 class="year-title">2025</h3>
+    
+    <div class="calendar-grid">
+      <div class="calendar-day" *ngFor="let day of days">{{ day }}</div>
+      <div 
+        *ngFor="let date of dates" 
+        class="calendar-date" 
+        [ngClass]="{'active': date.active}"
+        (click)="selectDate(date.day)">
+        {{ date.day }}
+      </div>
+    </div>
+    
+    <p class="instruction-text">Seleccione un día para ver los riegos que se ejecutaron en este</p>
+  </div>
+  
+  <div class="nav-buttons">
+    <ion-button fill="clear" class="nav-button">
+      <ion-icon name="home-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" class="nav-button">
+      <ion-icon name="add-circle-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" class="nav-button">
+      <ion-icon name="calendar-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>

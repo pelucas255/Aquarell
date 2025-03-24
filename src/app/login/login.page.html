@@ -4,6 +4,7 @@
     <h1 class="titulo">Bienvenido a Aquarelle</h1>
     <p class="subtitulo">Ingrese su correo y contraseña</p>
 
+<<<<<<< HEAD
     <ion-list class="login-box">
       <ion-item>
         <ion-label position="floating">Correo electrónico</ion-label>
@@ -19,6 +20,25 @@
     <ion-text color="medium">
       <p class="textReg" (click)="goToRegister()">¿No tiene cuenta? Registrese aqui</p>
     </ion-text>
+=======
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <ion-list class="login-box">
+        <ion-item>
+          <ion-label position="floating">Correo electrónico</ion-label>
+          <ion-input type="email" formControlName="email" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" formControlName="password" required></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-button expand="block" class="botonIni" type="submit" [disabled]="!loginForm.valid">Iniciar Sesión</ion-button>
+      <ion-text color="medium">
+        <ion-button expand="block" class="botonReg" [routerLink]="['/registro']">registrarse</ion-button>
+      </ion-text>
+    </form>
+>>>>>>> 142f90fa4ffbc47ea1bba189e6281f666543ab02
   </div>
   <div class="containerPlanta">
     <img src="assets/img/planta1.jpg" alt="Logo" class="planta">
@@ -26,4 +46,8 @@
   <div class="containerPlantaTop">
     <img src="assets/img/planta4.jpg" alt="Logo" class="planta-top">
   </div>
+<<<<<<< HEAD
 </ion-content>
+=======
+</ion-content>
+>>>>>>> 142f90fa4ffbc47ea1bba189e6281f666543ab02

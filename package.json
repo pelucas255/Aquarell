@@ -14,7 +14,11 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^19.0.0",
+<<<<<<< HEAD
     "@angular/common": "^19.0.0",
+=======
+    "@angular/common": "^19.1.7",
+>>>>>>> 142f90fa4ffbc47ea1bba189e6281f666543ab02
     "@angular/compiler": "^19.0.0",
     "@angular/core": "^19.0.0",
     "@angular/forms": "^19.0.0",
@@ -27,7 +31,18 @@
     "@capacitor/keyboard": "7.0.0",
     "@capacitor/status-bar": "7.0.0",
     "@ionic/angular": "^8.0.0",
+<<<<<<< HEAD
     "ionicons": "^7.0.0",
+=======
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "ionicons": "^7.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.12.1",
+>>>>>>> 142f90fa4ffbc47ea1bba189e6281f666543ab02
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"

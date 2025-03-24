@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { PlantaService } from '../services/planta.service';
+=======
+import { Component } from '@angular/core';
+>>>>>>> 142f90fa4ffbc47ea1bba189e6281f666543ab02
 
 @Component({
   selector: 'app-home',
@@ -9,6 +13,7 @@ import { PlantaService } from '../services/planta.service';
   styleUrls: ['home.page.scss'],
   standalone: false,
 })
+<<<<<<< HEAD
 export class HomePage implements OnInit {
 
   plantas: any[] = [];
@@ -54,5 +59,10 @@ export class HomePage implements OnInit {
     this.router.navigate(['/plant-detail', planta._id]);
   }
   
+=======
+export class HomePage {
+
+  constructor() {}
+>>>>>>> 142f90fa4ffbc47ea1bba189e6281f666543ab02
 
 }
